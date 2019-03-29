@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+            <string>HelveticaNeue-Medium</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NoteTableViewCell" rowHeight="107" id="KGk-i7-Jjw" customClass="NoteTableViewCell" customModule="NoteWander" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="471" height="107"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="471" height="106.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wb5-jT-mtF">
+                        <rect key="frame" x="20" y="8" width="43.5" height="20"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nei-a1-zF9">
+                        <rect key="frame" x="20" y="36" width="32" height="15.5"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tXm-cc-adA">
+                        <rect key="frame" x="0.0" y="105.5" width="471" height="1"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="dfc-P3-ikM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Wb5-jT-mtF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="7iw-na-Riy"/>
+                    <constraint firstItem="Nei-a1-zF9" firstAttribute="leading" secondItem="Wb5-jT-mtF" secondAttribute="leading" id="BKs-9A-ZZZ"/>
+                    <constraint firstItem="Wb5-jT-mtF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="HHk-gs-KcB"/>
+                    <constraint firstAttribute="bottom" secondItem="tXm-cc-adA" secondAttribute="bottom" id="Hfa-G6-V5A"/>
+                    <constraint firstItem="Nei-a1-zF9" firstAttribute="top" secondItem="Wb5-jT-mtF" secondAttribute="bottom" constant="8" id="R6m-9R-tND"/>
+                    <constraint firstAttribute="trailing" secondItem="tXm-cc-adA" secondAttribute="trailing" id="caM-eh-o6L"/>
+                    <constraint firstItem="tXm-cc-adA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tJc-Qf-xhl"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="titleLabel" destination="Wb5-jT-mtF" id="XIZ-Jf-0wv"/>
+                <outlet property="updatedLabel" destination="Nei-a1-zF9" id="tpw-gd-JBh"/>
+            </connections>
+            <point key="canvasLocation" x="109.5" y="85.5"/>
+        </tableViewCell>
+    </objects>
+</document>

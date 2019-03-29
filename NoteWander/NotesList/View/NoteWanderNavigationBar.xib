@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="NoteWanderNavigationBar" customModule="NoteWander" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="628" height="337"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v2j-R9-dKC" userLabel="IcoContainer">
+                    <rect key="frame" x="0.0" y="0.0" width="628" height="337"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eMc-e6-rV0">
+                            <rect key="frame" x="0.0" y="0.0" width="628" height="337"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFX-he-Dbg">
+                                    <rect key="frame" x="291.5" y="158" width="45.5" height="21"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfM-KP-yW0">
+                                    <rect key="frame" x="572" y="139.5" width="48" height="58"/>
+                                    <inset key="contentEdgeInsets" minX="10" minY="20" maxX="10" maxY="20"/>
+                                    <state key="normal" title="Add"/>
+                                    <connections>
+                                        <action selector="addButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="gGa-ea-qV8"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q1f-Ck-SKD">
+                                    <rect key="frame" x="487" y="139.5" width="68" height="58"/>
+                                    <inset key="contentEdgeInsets" minX="10" minY="20" maxX="10" maxY="20"/>
+                                    <state key="normal" title="Search"/>
+                                    <connections>
+                                        <action selector="searchButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="8C0-Su-QHc"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="IFX-he-Dbg" firstAttribute="centerY" secondItem="eMc-e6-rV0" secondAttribute="centerY" id="78d-5P-bpy"/>
+                                <constraint firstItem="IFX-he-Dbg" firstAttribute="centerX" secondItem="eMc-e6-rV0" secondAttribute="centerX" id="aua-5b-Hem"/>
+                                <constraint firstItem="wfM-KP-yW0" firstAttribute="leading" secondItem="Q1f-Ck-SKD" secondAttribute="trailing" constant="17" id="bvQ-iY-hNK"/>
+                                <constraint firstAttribute="trailing" secondItem="wfM-KP-yW0" secondAttribute="trailing" constant="8" id="mPd-Rr-aUa"/>
+                                <constraint firstItem="wfM-KP-yW0" firstAttribute="centerY" secondItem="eMc-e6-rV0" secondAttribute="centerY" id="vPv-EQ-r3F"/>
+                                <constraint firstItem="Q1f-Ck-SKD" firstAttribute="centerY" secondItem="wfM-KP-yW0" secondAttribute="centerY" id="vz6-8l-T0q"/>
+                            </constraints>
+                        </view>
+                        <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KGG-bd-5De">
+                            <rect key="frame" x="0.0" y="10" width="628" height="317"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="eMc-e6-rV0" firstAttribute="top" secondItem="v2j-R9-dKC" secondAttribute="top" id="01V-9j-W1b"/>
+                        <constraint firstItem="eMc-e6-rV0" firstAttribute="leading" secondItem="v2j-R9-dKC" secondAttribute="leading" id="8bL-c0-6rh"/>
+                        <constraint firstItem="KGG-bd-5De" firstAttribute="top" secondItem="v2j-R9-dKC" secondAttribute="top" constant="10" id="Afq-Ep-vw1"/>
+                        <constraint firstAttribute="trailing" secondItem="KGG-bd-5De" secondAttribute="trailing" id="EUc-IR-qwG"/>
+                        <constraint firstItem="KGG-bd-5De" firstAttribute="leading" secondItem="v2j-R9-dKC" secondAttribute="leading" id="UuJ-mr-fx1"/>
+                        <constraint firstAttribute="bottom" secondItem="KGG-bd-5De" secondAttribute="bottom" constant="10" id="oI3-Un-PLa"/>
+                        <constraint firstAttribute="bottom" secondItem="eMc-e6-rV0" secondAttribute="bottom" id="oTT-gq-ZfT"/>
+                        <constraint firstAttribute="trailing" secondItem="eMc-e6-rV0" secondAttribute="trailing" id="rBt-aV-Xxj"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="v2j-R9-dKC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="2Ry-bH-51X"/>
+                <constraint firstItem="v2j-R9-dKC" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="Ve3-6T-szs"/>
+                <constraint firstItem="v2j-R9-dKC" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="bd7-Ts-fiv"/>
+                <constraint firstItem="v2j-R9-dKC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="m8Q-KF-67I"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="containerViewForIcons" destination="eMc-e6-rV0" id="OFc-eP-0F7"/>
+                <outlet property="noteTitle" destination="IFX-he-Dbg" id="GpS-Ik-0Kk"/>
+                <outlet property="searchBar" destination="KGG-bd-5De" id="iWE-07-41I"/>
+            </connections>
+            <point key="canvasLocation" x="232" y="953.97301349325346"/>
+        </view>
+    </objects>
+</document>
